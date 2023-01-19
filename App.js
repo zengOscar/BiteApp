@@ -1,17 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import TopNavBar from './Navigation/TopNavBar';
-import NavBar from './Navigation/NavBar';
+import TopNavBar from './TopNavBar';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <TopNavBar />
-
+      <StatusBar style="auto" />
+      <View style={styles.topSide}>
+        <TopNavBar />
+      </View>
+      
       <Text>Open up App.js to start working on your app!</Text>
-      {/* <StatusBar style="auto" /> */}
 
-      <NavBar />
+
+      
     </View>
   );
 }
@@ -23,4 +25,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  topSide: {
+    alignSelf: 'flex-start'
+  }
 });
