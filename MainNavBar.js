@@ -10,5 +10,5 @@ function MyTabs() {
             <Tab.Screen name="Search" component={SearchScreen} />
             <Tab.Screen name="Profile" component={ProfileScreen} />
         </Tab.Navigator>
-    )
+    );
 }
