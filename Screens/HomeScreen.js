@@ -1,7 +1,8 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
-import TopNavBar from "../TopNavBar";
+import TopNavBar from "../Components/Home/TopNavBar";
+import CircularRating from "../Components/Home/Card/CircularRating";
 
 class HomeScreen extends React.Component {
   render() {
@@ -10,6 +11,9 @@ class HomeScreen extends React.Component {
         <StatusBar style="auto" />
         <View style={styles.topSide}>
           <TopNavBar />
+        </View>
+        <View>
+          <CircularRating rating={72} size={50} />
         </View>
       </SafeAreaView>
     );
