@@ -8,6 +8,8 @@ import ProfileScreen from "./Screens/ProfileScreen";
 import PostScreen from "./Screens/PostScreen";
 import FavoritesScreen from "./Screens/FavoritesScreen";
 
+import { NativeBaseProvider } from "native-base";
+
 import HomeIcon from "./assets/HomeIcon.svg";
 import SearchIcon from "./assets/SearchIcon.svg";
 import PostIcon from "./assets/PostIcon.svg";
@@ -23,70 +25,72 @@ const BottomTab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <BottomTab.Navigator
-        screenOptions={{
-          headerShown: false,
-          tabBarShowLabel: false,
-          tabBarStyle: {
-            borderRadius: 20,
-            marginBottom: 20,
-            position: "absolute",
-            alignItems: "center",
-            justifyContent: "center",
-            margin: 10,
-            marginBottom: 50,
-          },
-          backgroundColor: "#FBFBFB",
-        }}
-      >
-        <BottomTab.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{
-            tabBarIcon: ({ focused }) => {
-              return focused ? <HomeIconS /> : <HomeIcon />;
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <BottomTab.Navigator
+          screenOptions={{
+            headerShown: false,
+            tabBarShowLabel: false,
+            tabBarStyle: {
+              borderRadius: 20,
+              marginBottom: 20,
+              position: "absolute",
+              alignItems: "center",
+              justifyContent: "center",
+              margin: 10,
+              marginBottom: 50,
             },
+            backgroundColor: "#FBFBFB",
           }}
-        />
-        <BottomTab.Screen
-          name="Search"
-          component={SearchScreen}
-          options={{
-            tabBarIcon: ({ focused }) => {
-              return focused ? <SearchIconS /> : <SearchIcon />;
-            },
-          }}
-        />
-        <BottomTab.Screen
-          name="Post"
-          component={PostScreen}
-          options={{
-            tabBarIcon: ({ focused }) => {
-              return focused ? <PostIconS /> : <PostIcon />;
-            },
-          }}
-        />
-        <BottomTab.Screen
-          name="Favorites"
-          component={FavoritesScreen}
-          options={{
-            tabBarIcon: ({ focused }) => {
-              return focused ? <FavoritesIconS /> : <FavoritesIcon />;
-            },
-          }}
-        />
-        <BottomTab.Screen
-          name="Profile"
-          component={ProfileScreen}
-          options={{
-            tabBarIcon: ({ focused }) => {
-              return focused ? <ProfileIconS /> : <ProfileIcon />;
-            },
-          }}
-        />
-      </BottomTab.Navigator>
-    </NavigationContainer>
+        >
+          <BottomTab.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{
+              tabBarIcon: ({ focused }) => {
+                return focused ? <HomeIconS /> : <HomeIcon />;
+              },
+            }}
+          />
+          <BottomTab.Screen
+            name="Search"
+            component={SearchScreen}
+            options={{
+              tabBarIcon: ({ focused }) => {
+                return focused ? <SearchIconS /> : <SearchIcon />;
+              },
+            }}
+          />
+          <BottomTab.Screen
+            name="Post"
+            component={PostScreen}
+            options={{
+              tabBarIcon: ({ focused }) => {
+                return focused ? <PostIconS /> : <PostIcon />;
+              },
+            }}
+          />
+          <BottomTab.Screen
+            name="Favorites"
+            component={FavoritesScreen}
+            options={{
+              tabBarIcon: ({ focused }) => {
+                return focused ? <FavoritesIconS /> : <FavoritesIcon />;
+              },
+            }}
+          />
+          <BottomTab.Screen
+            name="Profile"
+            component={ProfileScreen}
+            options={{
+              tabBarIcon: ({ focused }) => {
+                return focused ? <ProfileIconS /> : <ProfileIcon />;
+              },
+            }}
+          />
+        </BottomTab.Navigator>
+      </NavigationContainer>
+    </NativeBaseProvider>
   );
 }
 

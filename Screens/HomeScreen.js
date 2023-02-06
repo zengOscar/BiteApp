@@ -2,7 +2,8 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import TopNavBar from "../Components/Home/TopNavBar";
-import CircularRating from "../Components/Home/Card/CircularRating";
+import CardProfileButton from "../Components/Home/Card/CardProfileButton";
+import { format } from "date-fns";
 
 class HomeScreen extends React.Component {
   render() {
@@ -12,9 +13,13 @@ class HomeScreen extends React.Component {
         <View style={styles.topSide}>
           <TopNavBar />
         </View>
-        <View>
-          <CircularRating rating={72} size={50} />
-        </View>
+        <CardProfileButton
+          rating={55}
+          size={25}
+          reviewText={"test"}
+          name={"Ronald Duck"}
+          date={format(new Date(2024, 11, 24), "PP")}
+        />
       </SafeAreaView>
     );
   }
