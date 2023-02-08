@@ -2,7 +2,7 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import TopNavBar from "../Components/Home/TopNavBar";
-import CardProfileButton from "../Components/Home/Card/CardProfileButton";
+import ReviewCard from "../Components/Home/Card/ReviewCard";
 import { format } from "date-fns";
 
 class HomeScreen extends React.Component {
@@ -13,7 +13,7 @@ class HomeScreen extends React.Component {
         <View style={styles.topSide}>
           <TopNavBar />
         </View>
-        <CardProfileButton
+        <ReviewCard
           rating={50}
           size={25}
           reviewText={"Worth a visit!"} // limit 26 char

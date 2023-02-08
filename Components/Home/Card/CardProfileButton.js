@@ -13,7 +13,7 @@ const CardProfileButton = ({
   size, // set from caller function
   reviewText, // passed in string from db
   avatarLink = "", // passed in url obtained from db
-  name, // passed in string from db
+  name, // passed in string from db - if name length is too long then truncate last initial or change font size
   date, // passed in date from db
   profileTier,
 }) => {
@@ -50,7 +50,7 @@ const CardProfileButton = ({
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.date}>{date}</Text>
         </View>
-
+        <View style={styles.whitespace}></View>
         <View style={styles.profileTierIcon}>
           {profileTierIcon(profileTier)}
         </View>
@@ -63,6 +63,7 @@ const CardProfileButton = ({
           source={
             avatarLink ? { uri: avatarLink } : { uri: "https:broken-link" }
           }
+          fallbackSource={require("../../../assets/Profile/DefaultProfile.png")}
         >
           {fallback}
         </Avatar>
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
     maxWidth: "50%",
   },
   mainCard: {
-    width: "40%",
+    width: "100%",
     backgroundColor: "#FFFFFF",
     borderRadius: 12,
     justifyContent: "center",
@@ -103,11 +104,10 @@ const styles = StyleSheet.create({
   },
   avatarContainer: {
     alignItems: "center",
-    padding: 10,
-    marginBottom: 10,
+    padding: 5,
   },
   nameDate: {
-    padding: 12,
+    padding: 5,
     textAlign: "left",
   },
   name: {
@@ -124,7 +124,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   profileTierIcon: {
-    marginRight: 15,
+    paddingLeft: 10,
+  },
+  whitespace: {
+    width: 5,
   },
 });
 
