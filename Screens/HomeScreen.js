@@ -14,11 +14,12 @@ class HomeScreen extends React.Component {
           <TopNavBar />
         </View>
         <CardProfileButton
-          rating={55}
+          rating={50}
           size={25}
-          reviewText={"test"}
+          reviewText={"Worth a visit!"} // limit 26 char
           name={"Ronald Duck"}
           date={format(new Date(2024, 11, 24), "PP")}
+          profileTier={1}
         />
       </SafeAreaView>
     );

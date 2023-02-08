@@ -3,17 +3,45 @@ import { View, StyleSheet, Text } from "react-native";
 import CircularRating from "./CircularRating";
 import { Avatar, Center } from "native-base";
 
+import DiamondRating from "../../../assets/Profile/DiamondRating.svg";
+import GoldRating from "../../../assets/Profile/GoldRating.svg";
+import SilverRating from "../../../assets/Profile/SilverRating.svg";
+import BronzeRating from "../../../assets/Profile/BronzeRating.svg";
+
 const CardProfileButton = ({
-  rating,
-  size,
-  reviewText,
-  fallback = "--", // limit to 2 characters
-  avatarLink = "",
-  name,
-  date,
+  rating, // passed in number from db
+  size, // set from caller function
+  reviewText, // passed in string from db
+  avatarLink = "", // passed in url obtained from db
+  name, // passed in string from db
+  date, // passed in date from db
+  profileTier,
 }) => {
   const sizePercent = size / 100;
   const realFontSize = sizePercent * 60;
+
+  const fallback =
+    name && name !== ""
+      ? name
+          .split(" ")
+          .map((n) => n[0])
+          .join("")
+      : "--";
+
+  const profileTierIcon = (profileTier) => {
+    switch (profileTier) {
+      case 1:
+        return <DiamondRating />;
+      case 2:
+        return <GoldRating />;
+      case 3:
+        return <SilverRating />;
+      case 4:
+        return <BronzeRating />;
+      default:
+        return <BronzeRating />;
+    }
+  };
 
   return (
     <View style={[styles.mainCard, styles.shadowProp]}>
@@ -23,7 +51,9 @@ const CardProfileButton = ({
           <Text style={styles.date}>{date}</Text>
         </View>
 
-        <View>{/* for the rating related icon */}</View>
+        <View style={styles.profileTierIcon}>
+          {profileTierIcon(profileTier)}
+        </View>
       </View>
 
       <View style={[styles.avatarContainer, styles.shadowProp]}>
@@ -40,9 +70,7 @@ const CardProfileButton = ({
       <View style={styles.ratingBox}>
         <CircularRating rating={rating} size={size} />
         <View style={styles.reviewTextBox}>
-          <Text style={{ fontSize: realFontSize, flexShrink: 1 }}>
-            {reviewText}
-          </Text>
+          <Text style={{ fontSize: realFontSize }}>{reviewText}</Text>
         </View>
       </View>
     </View>
@@ -52,17 +80,20 @@ const CardProfileButton = ({
 const styles = StyleSheet.create({
   ratingBox: {
     flexDirection: "row",
-    width: "100%",
-    justifyContent: "center",
+    justifyContent: "space-around",
     marginBottom: 2,
   },
   reviewTextBox: {
     justifyContent: "center",
+    paddingLeft: 10,
+    maxWidth: "50%",
   },
   mainCard: {
     width: "40%",
     backgroundColor: "#FFFFFF",
     borderRadius: 12,
+    justifyContent: "center",
+    alignItems: "center",
   },
   shadowProp: {
     shadowColor: "#171717",
@@ -88,7 +119,12 @@ const styles = StyleSheet.create({
     fontWeight: "400",
   },
   nameSection: {
+    flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
+  },
+  profileTierIcon: {
+    marginRight: 15,
   },
 });
 

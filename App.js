@@ -10,16 +10,16 @@ import FavoritesScreen from "./Screens/FavoritesScreen";
 
 import { NativeBaseProvider } from "native-base";
 
-import HomeIcon from "./assets/HomeIcon.svg";
-import SearchIcon from "./assets/SearchIcon.svg";
-import PostIcon from "./assets/PostIcon.svg";
-import FavoritesIcon from "./assets/FavoritesIcon.svg";
-import ProfileIcon from "./assets/ProfileIcon.svg";
-import HomeIconS from "./assets/HomeIconS.svg";
-import SearchIconS from "./assets/SearchIconS.svg";
-import PostIconS from "./assets/PostIconS.svg";
-import FavoritesIconS from "./assets/FavoritesIconS.svg";
-import ProfileIconS from "./assets/ProfileIconS.svg";
+import HomeIcon from "./assets/Navbar/HomeIcon.svg";
+import SearchIcon from "./assets/Navbar/SearchIcon.svg";
+import PostIcon from "./assets/Navbar/PostIcon.svg";
+import FavoritesIcon from "./assets/Navbar/FavoritesIcon.svg";
+import ProfileIcon from "./assets/Navbar/ProfileIcon.svg";
+import HomeIconS from "./assets/Navbar/HomeIconS.svg";
+import SearchIconS from "./assets/Navbar/SearchIconS.svg";
+import PostIconS from "./assets/Navbar/PostIconS.svg";
+import FavoritesIconS from "./assets/Navbar/FavoritesIconS.svg";
+import ProfileIconS from "./assets/Navbar/ProfileIconS.svg";
 
 const BottomTab = createBottomTabNavigator();
 
