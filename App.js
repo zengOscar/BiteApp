@@ -32,13 +32,13 @@ export default function App() {
             headerShown: false,
             tabBarShowLabel: false,
             tabBarStyle: {
-              borderRadius: 20,
+              borderRadius: 15,
               marginBottom: 20,
               position: "absolute",
               alignItems: "center",
               justifyContent: "center",
-              margin: 10,
-              marginBottom: 50,
+              // margin: 10,
+              marginBottom: 0,
             },
             backgroundColor: "#FBFBFB",
           }}

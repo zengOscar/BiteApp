@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import CardProfileButton from "./CardProfileButton";
+import ReviewCardText from "./ReviewCardText";
 
 const ReviewCard = ({
   rating, // passed in number from db
@@ -16,7 +17,7 @@ const ReviewCard = ({
       <View style={styles.topSection}>
         <View style={[styles.profileSection, styles.shadowProp]}>
           <CardProfileButton
-            rating={50}
+            rating={100}
             size={25}
             reviewText={"Worth a visit!"} // limit 26 char
             name={"Ronald Duck"}
@@ -25,14 +26,20 @@ const ReviewCard = ({
           />
         </View>
         <View>
-          <Text>temp</Text>
+          <Text>Image stack goes here</Text>
         </View>
       </View>
-      <View>
-        <Text>
-          Description Description Description Description Description
-          Description Description Description Description Description
-        </Text>
+      <View style={styles.reviewSection}>
+        <ReviewCardText
+          name={"Roku Aburiya"}
+          cuisine={"Japanese"}
+          lowPrice={40}
+          highPrice={70}
+          location={"West loop, Chicago"}
+          description={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum facilisis varius. Nulla nisl justo, congue eget ante et, posuere malesuada felis. Quisque ultricies ac ante vel luctus. Duis eget velit nec purus pulvinar malesuada. Cras semper ex quis magna pellentesque, sed fermentum arcu sagittis. Nam laoreet iaculis egestas. Aliquam ut eros vel est fringilla pharetra. Donec at gravida ex. Suspendisse volutpat suscipit interdum. Nunc vel finibus arcu. Phasellus tincidunt congue metus, ac ornare odio fermentum tempor. Sed tincidunt gravida mauris, sit amet ultrices ante maximus eu. Cras ac ex congue, rutrum massa a, euismod nisl. Curabitur eu lectus ac risus commodo pharetra. Etiam laoreet nisi sed rutrum convallis. Suspendisse tempor purus vitae massa suscipit iaculis. Donec ullamcorper venenatis sem, vel ultricies ipsum vehicula ut. Duis convallis pharetra porta. Nunc ultricies lacinia tellus at ultricies. Integer semper vitae leo ac tincidunt. Mauris venenatis, felis sed mollis rutrum, enim turpis ullamcorper sem, eget ornare felis odio in ligula. Vivamus scelerisque risus in quam vehicula, id pellentesque nunc congue. Pellentesque sed diam nunc."
+          }
+        />
       </View>
       <View>
         <Text>Interaction</Text>
@@ -46,6 +53,11 @@ const styles = StyleSheet.create({
     width: "45%",
     alignSelf: "flex-start",
     margin: 15,
+  },
+  reviewSection: {
+    width: "100%",
+    paddingLeft: 15,
+    paddingRight: 15,
   },
   mainCard: {
     width: "90%",
