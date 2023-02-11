@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import CardProfileButton from "./CardProfileButton";
+import InteractBar from "./InteractBar";
 import ReviewCardText from "./ReviewCardText";
 
 const ReviewCard = ({
@@ -41,8 +42,8 @@ const ReviewCard = ({
           }
         />
       </View>
-      <View>
-        <Text>Interaction</Text>
+      <View style={styles.interactBar}>
+        <InteractBar />
       </View>
     </View>
   );
@@ -58,10 +59,11 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingLeft: 15,
     paddingRight: 15,
+    flexDirection: "column",
   },
   mainCard: {
     width: "90%",
-    height: "50%",
+    height: "42%",
     backgroundColor: "#FFFFFF",
     borderRadius: 12,
     justifyContent: "flex-start",
@@ -78,6 +80,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "100%",
     justifyContent: "space-between",
+  },
+  interactBar: {
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 
