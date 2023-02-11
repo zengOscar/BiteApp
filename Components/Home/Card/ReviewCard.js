@@ -18,12 +18,12 @@ const ReviewCard = ({
       <View style={styles.topSection}>
         <View style={[styles.profileSection, styles.shadowProp]}>
           <CardProfileButton
-            rating={100}
-            size={25}
-            reviewText={"Worth a visit!"} // limit 26 char
-            name={"Ronald Duck"}
+            rating={rating}
+            size={size}
+            reviewText={reviewText} // limit 26 char
+            name={name}
             date={date}
-            profileTier={1}
+            profileTier={profileTier}
           />
         </View>
         <View>
