@@ -15,7 +15,6 @@ class HomeScreen extends React.Component {
         </View>
         <ReviewCard
           rating={50}
-          size={25}
           reviewText={"Worth a visit!"} // limit 26 char
           name={"Ronald Duck"}
           date={format(new Date(2024, 11, 24), "PP")}

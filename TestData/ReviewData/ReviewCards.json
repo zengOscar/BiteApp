@@ -1,0 +1,210 @@
+{
+    "reviews" : [
+        {
+            "id" : 1,
+            "rating" : 50,
+            "shortReview" : "Worth a visit!",
+            "datePosted" : {
+                "day" : 24,
+                "month" : "December",
+                "year" : 2024
+            },
+            "user" : 1,
+            "restaurant" : {
+                "name" : "Roku Aburiya",
+                "cuisine" : "Japanese",
+                "summary" : {
+                    "lowPrice" : 40,
+                    "highPrice" : 70,
+                    "location" : {
+                        "neighborhood" : "West Loop",
+                        "city" : "Chicago",
+                        "state" : "Illinois"
+                    }
+                },
+                "reivew" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum facilisis varius. Nulla nisl justo, congue eget ante et, posuere malesuada felis. Quisque ultricies ac ante vel luctus. Duis eget velit nec purus pulvinar malesuada. Cras semper ex quis magna pellentesque, sed fermentum arcu sagittis. Nam laoreet iaculis egestas. Aliquam ut eros vel est fringilla pharetra. Donec at gravida ex."
+            },
+            "images" : [
+                {
+                    "id" : 1,
+                    "altText" : "image",
+                    "uri" : "../reviews/images/1RonaldDuckRokuAburiya.png"
+                }
+            ],
+            "comments" : [
+                {
+                    "id" : 1,
+                    "text" : "Great reviewww",
+                    "likes" : 1,
+                    "date" : {
+                        "day" : 26,
+                        "month" : "December",
+                        "year" : 2024
+                    }
+                }
+            ],
+            "upvotes" : 3,
+            "downvotes" : 1,
+            "reported" : 0
+        },
+        {
+            "id" : 2,
+            "rating" : 66,
+            "shortReview" : "Ooo Yum!",
+            "datePosted" : {
+                "day" : 3,
+                "month" : "January",
+                "year" : 2025
+            },
+            "user" : 2,
+            "restaurant" : {
+                "summary" : {
+                    "name" : "Maccdon alds",
+                    "cuisine" : "American",
+                    "lowPrice" : 5,
+                    "highPrice" : 15,
+                    "location" : {
+                        "neighborhood" : "West Loop",
+                        "city" : "Chicago",
+                        "state" : "Illinois"
+                    }
+                },
+                "reivew" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum facilisis varius. Nulla nisl justo, congue eget ante et, posuere malesuada felis. Quisque ultricies ac ante vel luctus. Duis eget velit nec purus pulvinar malesuada. Cras semper ex quis magna pellentesque, sed fermentum arcu sagittis. Nam laoreet iaculis egestas. Aliquam ut eros vel est fringilla pharetra. Donec at gravida ex."
+            },
+            "images" : [
+                {
+                    "id" : 1,
+                    "altText" : "image",
+                    "uri" : "../reviews/images/2StevieWonderMaccdonalds1.png"
+                },
+                {
+                    "id" : 2,
+                    "altText" : "image",
+                    "uri" : "../reviews/images/2StevieWonderMaccdonalds2.png"
+                }
+            ],
+            "comments" : [
+                {
+                    "id" : 1,
+                    "text" : "Great review",
+                    "likes" : 3,
+                    "date" : {
+                        "day" : 4,
+                        "month" : "January",
+                        "year" : 2025
+                    }
+                }
+            ],
+            "upvotes" : 5,
+            "downvotes" : 2,
+            "reported" : 0
+        },
+        {
+            "id" : 3,
+            "rating" : 89,
+            "shortReview" : "Amazing!",
+            "datePosted" : {
+                "day" : 30,
+                "month" : "January",
+                "year" : 2025
+            },
+            "user" : 3,
+            "restaurant" : {
+                "summary" : {
+                    "name" : "Roku Aburiya",
+                    "cuisine" : "Japanese",
+                    "lowPrice" : 30,
+                    "highPrice" : 60,
+                    "location" : {
+                        "neighborhood" : "West Loop",
+                        "city" : "Chicago",
+                        "state" : "Illinois"
+                    }
+                },
+                "reivew" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum facilisis varius. Nulla nisl justo, congue eget ante et, posuere malesuada felis. Quisque ultricies ac ante vel luctus. Duis eget velit nec purus pulvinar malesuada. Cras semper ex quis magna pellentesque, sed fermentum arcu sagittis. Nam laoreet iaculis egestas. Aliquam ut eros vel est fringilla pharetra. Donec at gravida ex."
+            },
+            "images" : [
+                {
+                    "id" : 1,
+                    "altText" : "image",
+                    "uri" : "../reviews/images/3BrentTildaRokuAburiya1.png"
+                },
+                {
+                    "id" : 2,
+                    "altText" : "image",
+                    "uri" : "../reviews/images/3BrentTildaRokuAburiya2.png"
+                }
+            ],
+            "comments" : [
+                {
+                    "id" : 1,
+                    "text" : "Great review",
+                    "likes" : 3,
+                    "date" : {
+                        "day" : 31,
+                        "month" : "January",
+                        "year" : 2025
+                    }
+                }
+            ],
+            "upvotes" : 2,
+            "downvotes" : 0,
+            "reported" : 0
+        },
+        {
+            "id" : 4,
+            "rating" : 23,
+            "shortReview" : "Don't go here",
+            "datePosted" : {
+                "day" : 8,
+                "month" : "February",
+                "year" : 2025
+            },
+            "user" : 3,
+            "restaurant" : {
+                "summary" : {
+                    "name" : "Maccdon alds",
+                    "cuisine" : "American",
+                    "lowPrice" : 3,
+                    "highPrice" : 20,
+                    "location" : {
+                        "neighborhood" : "West Loop",
+                        "city" : "Chicago",
+                        "state" : "Illinois"
+                    }
+                },
+                "reivew" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum facilisis varius. Nulla nisl justo, congue eget ante et, posuere malesuada felis. Quisque ultricies ac ante vel luctus. Duis eget velit nec purus pulvinar malesuada. Cras semper ex quis magna pellentesque, sed fermentum arcu sagittis. Nam laoreet iaculis egestas. Aliquam ut eros vel est fringilla pharetra. Donec at gravida ex."
+            },
+            "images" : [
+                {
+                    "id" : 1,
+                    "altText" : "image",
+                    "uri" : "../reviews/images/4BrentTildaRokuAburiya1.png"
+                },
+                {
+                    "id" : 2,
+                    "altText" : "image",
+                    "uri" : "../reviews/images/4BrentTildaRokuAburiya2.png"
+                }
+            ],
+            "comments" : [
+                {
+                    "id" : 1,
+                    "text" : "Great review",
+                    "likes" : 3,
+                    "date" : {
+                        "day" : 9,
+                        "month" : "February",
+                        "year" : 2025
+                    }
+                }
+            ],
+            "upvotes" : 1,
+            "downvotes" : 2,
+            "reported" : 0
+        }
+    ]
+}
+
+
+

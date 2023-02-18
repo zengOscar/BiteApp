@@ -6,7 +6,7 @@ import ReviewCardText from "./ReviewCardText";
 
 const ReviewCard = ({
   rating, // passed in number from db
-  size, // set from caller function
+  size = 25, // set from caller function
   reviewText, // passed in string from db
   avatarLink = "", // passed in url obtained from db
   name, // passed in string from db - if name length is too long then truncate last initial or change font size
